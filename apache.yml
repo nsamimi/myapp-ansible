@@ -16,8 +16,7 @@
         # state: started
         # enabled: True
     - name: Start Apache server with command line
-      command:
-        args: /usr/sbin/apachectl -k start    
+      command: /usr/sbin/apachectl -k start    
     - name: Deploy static website
       copy:
         src: index.html

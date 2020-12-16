@@ -2,6 +2,9 @@
 - hosts: webservers 
   become: True
   tasks:
+    - name: Update cache
+      yum:
+        update_only: yes
     - name: Install packages
       yum:
         name: "httpd"

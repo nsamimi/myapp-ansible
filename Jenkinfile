@@ -7,9 +7,9 @@ pipeline{
                 git 'https://github.com/nsamimi/myapp-ansible'
             }
         }    
-    stage('Executate Ansible') {
-        steps{
-            ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'apache.yml'
+        stage('Executate Ansible') {
+            steps{
+                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'apache.yml'
             }
         }
     }
